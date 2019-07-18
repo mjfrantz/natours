@@ -48,7 +48,8 @@ const tourSchema = new mongoose.Schema({
     images: [String],
     createdAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now(),
+        select: false //This feature allows for fields to be hidden from users 
     },
     startDates: [Date]
 });
